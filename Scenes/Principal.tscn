@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Personajes/Prota.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Personajes/Enemy.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2418.25, 71.5 )
+
+[node name="World" type="Node2D"]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Prota" parent="Characters" instance=ExtResource( 1 )]
+position = Vector2( 476, 391 )
+
+[node name="Enemy" parent="Characters" instance=ExtResource( 2 )]
+position = Vector2( 1522, 643 )
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2( 2018, 1014 )
+shape = SubResource( 2 )

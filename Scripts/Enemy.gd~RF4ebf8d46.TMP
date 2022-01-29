@@ -1,0 +1,16 @@
+extends KinematicBody2D
+
+
+var GRAVITY = 400
+var lineal_vel = Vector2.ZERO
+var prota
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	prota = get_parent().get_node("Prota")
+
+
+func _physics_process(delta) -> void:
+	# MOVIMIENTO
+	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
+	lineal_vel.y += GRAVITY * delta
