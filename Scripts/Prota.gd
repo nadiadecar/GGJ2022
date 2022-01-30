@@ -108,7 +108,8 @@ func _physics_process(delta) -> void:
 	on_floor = is_on_floor()
 	
 	if not dead: 
-		get_movement()
+		if not attacked:
+			get_movement()
 		lineal_vel = move_and_slide(lineal_vel)
 		lineal_vel.x = 0
 			

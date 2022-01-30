@@ -4,6 +4,7 @@ extends Node2D
 onready var player = $"Characters/Prota"
 onready var constant = $"Constant"
 onready var GameOverText = $"Constant/Game Over"
+
 onready var timer = $EnemiesCreator
 
 var random = RandomNumberGenerator.new()
@@ -23,8 +24,8 @@ func enemeiesCreate():
 		if type == 1: 
 			enemy = trident_enemy.instance()
 		else: 
-			#enemy = gun_enemy.instance()
-			enemy = trident_enemy.instance()
+			enemy = gun_enemy.instance()
+			#enemy = trident_enemy.instance()
 		add_child(enemy)
 		enemy.position = Vector2(pos_x, -125)
 		

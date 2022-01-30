@@ -1,9 +1,8 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scripts/Enemy-Gun.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemies/monje-Sheet.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Enemies/Monjas daño -Sheet.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/Bullete.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 34.0
@@ -348,23 +347,27 @@ animation = "Damage-Right"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=15]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=16]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=19]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=22]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=4]
 states/Base-Left/node = SubResource( 11 )
@@ -372,10 +375,10 @@ states/Base-Left/position = Vector2( 372.6, 40.6 )
 states/Base-Right/node = SubResource( 12 )
 states/Base-Right/position = Vector2( 229.4, 123 )
 states/Damage-Left/node = SubResource( 13 )
-states/Damage-Left/position = Vector2( 567.8, 51.8 )
+states/Damage-Left/position = Vector2( 641.8, 192.8 )
 states/Damage-Right/node = SubResource( 14 )
-states/Damage-Right/position = Vector2( 391, 167 )
-transitions = [ "Base-Right", "Damage-Right", SubResource( 15 ), "Damage-Right", "Base-Right", SubResource( 16 ), "Base-Right", "Base-Left", SubResource( 17 ), "Base-Left", "Base-Right", SubResource( 18 ), "Base-Left", "Damage-Left", SubResource( 19 ), "Damage-Left", "Base-Left", SubResource( 20 ), "Damage-Left", "Base-Right", SubResource( 21 ), "Base-Right", "Damage-Left", SubResource( 22 ), "Damage-Right", "Base-Left", SubResource( 23 ), "Base-Left", "Damage-Right", SubResource( 24 ) ]
+states/Damage-Right/position = Vector2( 433, 343 )
+transitions = [ "Base-Right", "Damage-Right", SubResource( 15 ), "Base-Right", "Base-Left", SubResource( 17 ), "Base-Left", "Base-Right", SubResource( 18 ), "Base-Left", "Damage-Left", SubResource( 19 ), "Base-Right", "Damage-Left", SubResource( 22 ), "Base-Left", "Damage-Right", SubResource( 24 ), "Damage-Right", "Base-Right", SubResource( 25 ), "Damage-Right", "Base-Left", SubResource( 26 ), "Damage-Left", "Base-Right", SubResource( 27 ), "Damage-Left", "Base-Left", SubResource( 28 ) ]
 start_node = "Base-Right"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=5]
@@ -414,8 +417,6 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 5 )
 
 [node name="attackedTimer" type="Timer" parent="."]
-
-[node name="Bullete" parent="." instance=ExtResource( 4 )]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

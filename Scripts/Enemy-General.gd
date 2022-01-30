@@ -58,7 +58,7 @@ func _physics_process(delta) -> void:
 func recive_damage(damage): 
 	HP -= damage 
 	if HP <= 0:
-		dead = true 
+		dead = true
 	set_attacked(true)
 	print("Enemy life:" , HP)
 	attacked_timer.set_wait_time(1)
