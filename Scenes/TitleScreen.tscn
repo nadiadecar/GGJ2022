@@ -122,10 +122,12 @@ position = Vector2( 1381, 663 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
 animation = "iddle_lobo"
+frame = 1
 playing = true
 flip_h = true
 
 [node name="StartButton" type="Button" parent="."]
+
 margin_left = 415.0
 margin_top = 546.0
 margin_right = 798.0

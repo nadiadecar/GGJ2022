@@ -1,7 +1,6 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scenes/Personajes/Prota.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Personajes/Enemy-Trident.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/Background/tile_tierra.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Background/arbol culiao papus_noche.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Background/Sprite-0ASDSAFASF_noche.png" type="Texture" id=5]
@@ -562,8 +561,8 @@ __meta__ = {
 }
 
 [node name="WayayayNoche" type="Sprite" parent="Cartel flechas"]
-position = Vector2( 978.599, 468.625 )
-scale = Vector2( 0.86098, 0.86098 )
+position = Vector2( 1057, 413 )
+scale = Vector2( 1.04162, 1.04162 )
 texture = ExtResource( 15 )
 flip_h = true
 
@@ -598,8 +597,8 @@ flip_h = true
 [node name="Sprites_frente" type="Node" parent="."]
 
 [node name="ButNoche" type="Sprite" parent="Sprites_frente"]
-position = Vector2( -2829, 475 )
-scale = Vector2( 1.25701, 1.21206 )
+position = Vector2( -3033, 391 )
+scale = Vector2( 1.47461, 1.42188 )
 texture = ExtResource( 13 )
 
 [node name="Characters" type="Node2D" parent="."]
@@ -607,13 +606,10 @@ texture = ExtResource( 13 )
 [node name="Prota" parent="Characters" instance=ExtResource( 1 )]
 position = Vector2( -1100, 703 )
 
-[node name="Enemy-Trident" parent="Characters" instance=ExtResource( 2 )]
-position = Vector2( 2027, 141 )
-
 [node name="ParedInvisibleInicio" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParedInvisibleInicio"]
-position = Vector2( -2786, 252 )
+position = Vector2( -2916.37, 247.762 )
 shape = SubResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
