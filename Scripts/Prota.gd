@@ -13,15 +13,18 @@ var is_wolf = true
 var upcoming_change = false 
 var on_floor
 var collider 
+var walking = false
 var waiting = false
+var jumped = false
+var attacked = false 
 signal game_over
 
 onready var timer = $Timer
+onready var playback = $AnimationTree.get("parameters/playback")
 
 func _ready() -> void:
-	pass
-#	$AnimationTree.active = true
-#	get_node("AnimationPlayer")
+	$AnimationTree.active = true
+	get_node("AnimationPlayer")
 
 
 
@@ -29,6 +32,7 @@ func get_movement():
 	if on_floor and Input.is_action_pressed("jump") and can_jump:
 		can_jump = false 
 		lineal_vel.y = -SPEED
+		jumped = true
 
 	if Input.is_action_just_released("jump") and not can_jump:
 		can_jump = true 
@@ -36,11 +40,12 @@ func get_movement():
 	if Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
 		to_right = true
 		lineal_vel.x += SPEED
-
+		walking = true
 
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
 		to_right = false
 		lineal_vel.x -= SPEED
+		walking = true
 
 
 
@@ -81,20 +86,49 @@ func _physics_process(delta) -> void:
 	get_movement()
 	lineal_vel = move_and_slide(lineal_vel)
 	lineal_vel.x = 0
-	
+		
 	if Input.is_action_pressed("attack") and can_attack:
 		if is_wolf:
-			can_attack = false
+			attacked = true
+			can_attack = false 
 			wolf_attack()
 			
+
+	#Animations 
+	if on_floor and not attacked: 
+		if abs(lineal_vel.x) <= 0:
+			if to_right:
+				playback.travel("Idle-Right")
+			else:
+				playback.travel("Idle-Left")
+		if walking and can_jump: 
+			if to_right: 
+				playback.travel("Walking-Right")
+			else: 
+				playback.travel("Walking-Left")
+	if jumped: 
+		if to_right: 
+			playback.travel("Jumping-Right")
+		else: 
+			playback.travel("Jumping-Left")
+			
+	if attacked: 
+		if to_right:
+			playback.travel("Attack-Right")
+		else: 
+			playback.travel("Attack-Left")
+		
+	jumped = false
+	walking = false 
+	
 	if Input.is_action_just_released("attack") and not waiting:
 		waiting = true 
 		timer.set_wait_time(1)
 		timer.start()
-		 
-
+	
 
 func _on_Timer_timeout():
 	timer.stop()
 	can_attack = true
 	waiting = false
+	attacked = false 
