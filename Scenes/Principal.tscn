@@ -7,7 +7,7 @@
 [ext_resource path="res://Sprites/Background/Sprite-0ASDSAFASF_noche.png" type="Texture" id=5]
 [ext_resource path="res://Music/Medioevo mp3.mp3" type="AudioStream" id=6]
 [ext_resource path="res://Fonts/pixelart.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Constant.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=9]
 [ext_resource path="res://Sprites/Background/cartelisp_noche.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/Background/cartarbol_noche.png" type="Texture" id=11]
@@ -579,15 +579,7 @@ volume_db = -10.0
 pitch_scale = 0.51
 autoplay = true
 
-[node name="Constant" type="Node2D" parent="."]
-
-[node name="Game Over" parent="Constant" instance=ExtResource( 8 )]
-visible = false
-position = Vector2( -784, -448 )
-z_index = 1
-
-[node name="Camera2D" type="Camera2D" parent="Constant"]
-current = true
+[node name="Constant" parent="." instance=ExtResource( 8 )]
 
 [node name="EnemiesCreator" type="Timer" parent="."]
 
