@@ -361,7 +361,7 @@ z_index = 2
 current = true
 
 [node name="BarraVida" type="Sprite" parent="."]
-position = Vector2( -723, -370 )
+position = Vector2( -844, -418 )
 texture = ExtResource( 3 )
 hframes = 13
 
