@@ -29,7 +29,8 @@ func _ready() -> void:
 
 
 func get_movement():
-	if Input.is_action_pressed("jump") and can_jump and not jumped: 
+	if Input.is_action_pressed("jump") and can_jump and not jumped:
+		$"Sfx/sonido_salto_lobo".play() 
 		can_jump = false 
 		lineal_vel.y = -SPEED
 		jumped = true
@@ -50,6 +51,7 @@ func get_movement():
 
 
 func wolf_attack():
+	$"Sfx/sonido_golpe".play()
 	collider = false
 	
 	var collision = false
@@ -69,6 +71,7 @@ func wolf_attack():
 
 
 func recive_damage(damage): 
+	$"Sfx/sonido_recibir_danio".play()
 	HP -= damage 
 	print(HP)
 	if HP <= 0: 
