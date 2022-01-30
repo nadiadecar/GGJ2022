@@ -1501,6 +1501,10 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
+[node name="fondo_noche" parent="." instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 0, -253 )
+
 [node name="Sfx" type="Node" parent="."]
 
 [node name="sonido_golpe" type="AudioStreamPlayer" parent="Sfx"]
@@ -1518,10 +1522,6 @@ volume_db = -10.0
 [node name="sonido_salto_lobo" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 10 )
 volume_db = -10.0
-
-[node name="fondo_noche" parent="." instance=ExtResource( 8 )]
-visible = false
-position = Vector2( 0, -253 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 4, -15 )
