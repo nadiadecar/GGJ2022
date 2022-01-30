@@ -38,8 +38,8 @@ margin_right = 525.0
 margin_bottom = -30.0
 rect_scale = Vector2( 5, 5 )
 custom_fonts/font = SubResource( 1 )
-text = "Presiona la tecla C
- para resucitar"
+text = "presiona C.
+para resucitar"
 align = 1
 valign = 1
 __meta__ = {

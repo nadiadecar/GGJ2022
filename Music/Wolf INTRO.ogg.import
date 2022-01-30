@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Wolf INTRO.ogg-4b9edc1aeb283ec7118953a7ccd0d004.oggstr"
+
+[deps]
+
+source_file="res://Music/Wolf INTRO.ogg"
+dest_files=[ "res://.import/Wolf INTRO.ogg-4b9edc1aeb283ec7118953a7ccd0d004.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
