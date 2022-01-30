@@ -1,16 +1,16 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Personajes/Prota.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Personajes/Enemy-Trident.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/Background/tile_tierra.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Background/arbol culiao papus_noche.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Background/Sprite-0ASDSAFASF_noche.png" type="Texture" id=5]
+[ext_resource path="res://Music/gamemusic.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Fonts/pixelart.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=9]
-[ext_resource path="res://Music/gamemusic.ogg" type="AudioStream" id=8]
-[ext_resource path="res://Sprites/Background/cartarbol_noche.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Background/cartelisp_noche.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Background/cartarbol_noche.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=19]
 size = 18
@@ -289,7 +289,7 @@ __meta__ = {
 
 [node name="ArbolCartel" type="Sprite" parent="Cartel flechas"]
 position = Vector2( -638, 404 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 
 [node name="texto Usa las flechas" type="Label" parent="Cartel flechas"]
 margin_left = -665.0
@@ -342,22 +342,20 @@ cell_size = Vector2( 112, 112 )
 format = 1
 tile_data = PoolIntArray( 105, 4, 0, 107, 1, 0, 108, 1, 0, 109, 1, 0, 110, 1, 0, 111, 1, 0, 112, 1, 0, 113, 1, 0, 114, 1, 0, 115, 1, 0, 116, 1, 0, 117, 1, 0, 118, 1, 0, 119, 1, 0, 120, 1, 0, 121, 1, 0, 122, 1, 0, 123, 1, 0, 124, 1, 0, 125, 1, 0, 126, 1, 0, 127, 1, 0, 128, 1, 0, 129, 1, 0, 130, 1, 0, 131, 1, 0, 132, 1, 0, 133, 1, 0, 134, 1, 0, 135, 1, 0, 136, 1, 0, 137, 1, 0, 65639, 4, 0, 131173, 4, 0, 196707, 4, 0, 262241, 4, 0, 327698, 3, 0, 327700, 1, 0, 327701, 1, 0, 327702, 1, 0, 327703, 1, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 1, 0, 327713, 1, 0, 327714, 1, 0, 327715, 1, 0, 327716, 1, 0, 327717, 1, 0, 327718, 1, 0, 327719, 1, 0, 327720, 1, 0, 327721, 1, 0, 327722, 1, 0, 327723, 1, 0, 327724, 1, 0, 327725, 1, 0, 327726, 1, 0, 327727, 1, 0, 327728, 5, 0, 327761, 4, 0, 327763, 1, 0, 327764, 1, 0, 327765, 1, 0, 327766, 1, 0, 327767, 1, 0, 327768, 1, 0, 327769, 1, 0, 327770, 1, 0, 327771, 1, 0, 327772, 1, 0, 327773, 1, 0, 327774, 1, 0, 327775, 1, 0, 327776, 1, 0, 393232, 3, 0, 393236, 2, 0, 393237, 2, 0, 393238, 2, 0, 393239, 2, 0, 393240, 2, 0, 393241, 2, 0, 393242, 2, 0, 393243, 2, 0, 393244, 2, 0, 393245, 2, 0, 393246, 2, 0, 393247, 2, 0, 393248, 2, 0, 393249, 2, 0, 393250, 2, 0, 393251, 2, 0, 393252, 2, 0, 393253, 2, 0, 393254, 2, 0, 393255, 2, 0, 393256, 2, 0, 393257, 2, 0, 393258, 2, 0, 393259, 2, 0, 393260, 2, 0, 393261, 2, 0, 393262, 2, 0, 393263, 2, 0, 393264, 2, 0, 393265, 2, 0, 393266, 5, 0, 393295, 4, 0, 393299, 2, 0, 393300, 2, 0, 524270, 0, 0, 524271, 0, 0, 524272, 0, 0, 524273, 0, 0, 524274, 0, 0, 524275, 0, 0, 524276, 0, 0, 524277, 0, 0, 524278, 0, 0, 524279, 0, 0, 524280, 0, 0, 524281, 0, 0, 524282, 0, 0, 524283, 0, 0, 524284, 0, 0, 524285, 0, 0, 524286, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458770, 2, 0, 458771, 2, 0, 458772, 2, 0, 458773, 2, 0, 458774, 2, 0, 458775, 2, 0, 458776, 2, 0, 458777, 2, 0, 458778, 2, 0, 458779, 2, 0, 458780, 2, 0, 458781, 2, 0, 458782, 2, 0, 458783, 2, 0, 458784, 2, 0, 458785, 2, 0, 458786, 2, 0, 458787, 2, 0, 458788, 2, 0, 458789, 2, 0, 458790, 2, 0, 458791, 2, 0, 458792, 2, 0, 458793, 2, 0, 458794, 2, 0, 458795, 2, 0, 458796, 2, 0, 458797, 2, 0, 458798, 2, 0, 458799, 2, 0, 458802, 2, 0, 458803, 2, 0, 458804, 7, 0, 458806, 8, 0, 458827, 9, 0, 458829, 6, 0, 458833, 2, 0, 458834, 2, 0, 524342, 2, 0, 524343, 2, 0, 524344, 0, 0, 524345, 0, 0, 524346, 0, 0, 524347, 0, 0, 524348, 0, 0, 524349, 0, 0, 524350, 0, 0, 524351, 1, 0, 524352, 1, 0, 524353, 1, 0, 524354, 1, 0, 524355, 1, 0, 524356, 1, 0, 524357, 1, 0, 524358, 1, 0, 524359, 1, 0, 524360, 1, 0, 524361, 1, 0, 524362, 1, 0, 524363, 2, 0, 524364, 2, 0, 524365, 2, 0, 524366, 2, 0, 524367, 2, 0, 524368, 2, 0 )
 
+[node name="MusicaPrincipal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
+pitch_scale = 0.51
+autoplay = true
+
 [node name="Constant" type="Node2D" parent="."]
+
+[node name="Game Over" parent="Constant" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( -784, -448 )
 z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Constant"]
 current = true
 
-[node name="Game Over" parent="Constant" instance=ExtResource( 8 )]
-visible = false
-position = Vector2( -784, -448 )
-
 [connection signal="game_over" from="Characters/Prota" to="." method="_on_Prota_game_over"]
-
-
-[node name="MusicaPrincipal" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-volume_db = -10.0
-pitch_scale = 0.51
-autoplay = true
-

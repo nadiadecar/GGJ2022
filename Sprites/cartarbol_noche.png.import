@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cartarbol_noche.png-616ae68aa1640d7fdfeaf8fc3057cd02.stex"
+path="res://.import/cartarbol_noche.png-2d03d6582e85629c4b8446e3c2278266.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cartarbol_noche.png"
-dest_files=[ "res://.import/cartarbol_noche.png-616ae68aa1640d7fdfeaf8fc3057cd02.stex" ]
+source_file="res://Sprites/cartarbol_noche.png"
+dest_files=[ "res://.import/cartarbol_noche.png-2d03d6582e85629c4b8446e3c2278266.stex" ]
 
 [params]
 

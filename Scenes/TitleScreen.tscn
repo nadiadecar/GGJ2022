@@ -8,7 +8,6 @@
 [ext_resource path="res://Fonts/pixelart.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Music/intro.mp3" type="AudioStream" id=7]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
@@ -36,6 +35,7 @@ position = Vector2( 1061, 569.031 )
 scale = Vector2( 3.55329, 3.55329 )
 frames = SubResource( 1 )
 animation = "iddle_lobo"
+frame = 1
 playing = true
 flip_h = true
 
