@@ -352,13 +352,13 @@ end_node = "0"
 [node name="Constant" type="Node2D"]
 z_index = 1
 
-[node name="Game Over" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( -784, -448 )
-z_index = 2
-
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Game Over" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -960, -540 )
+z_index = 2
 
 [node name="BarraVida" type="Sprite" parent="."]
 position = Vector2( -844, -418 )
