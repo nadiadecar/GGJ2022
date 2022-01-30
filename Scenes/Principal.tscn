@@ -261,25 +261,16 @@ points = PoolVector2Array( 0, 112, 224, 56, 224, 112 )
 
 [node name="World" type="Node2D"]
 
-[node name="Sprites_fondo" type="Node" parent="."]
+[node name="cartel zx" type="Node" parent="."]
 
-[node name="ArbolCuliaoPapusNoche" type="Sprite" parent="Sprites_fondo"]
-light_mask = 0
-position = Vector2( -1214, 589 )
-scale = Vector2( 1.07143, 1.07143 )
-texture = ExtResource( 4 )
-offset = Vector2( 0, -26 )
-
-[node name="Cartel suelo" type="Node2D" parent="."]
-
-[node name="CartelispNoche" type="Sprite" parent="Cartel suelo"]
+[node name="cartel" type="Sprite" parent="cartel zx"]
 position = Vector2( 721, 654.5 )
 texture = ExtResource( 10 )
 
-[node name="Cartel z x" type="Label" parent="Cartel suelo"]
+[node name="texto z x" type="Label" parent="cartel zx"]
 margin_left = 610.0
 margin_top = 614.0
-margin_right = 774.0
+margin_right = 778.0
 margin_bottom = 662.0
 rect_rotation = 4.5
 custom_colors/font_color = Color( 0.0666667, 0.317647, 0.360784, 1 )
@@ -291,13 +282,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Arbol con cartel" type="Node" parent="."]
+[node name="Cartel flechas" type="Node2D" parent="."]
 
-[node name="ArbolCartel" type="Sprite" parent="Arbol con cartel"]
+[node name="ArbolCartel" type="Sprite" parent="Cartel flechas"]
 position = Vector2( -638, 404 )
 texture = ExtResource( 9 )
 
-[node name="Cartel Usa las flechas" type="Label" parent="Arbol con cartel"]
+[node name="texto Usa las flechas" type="Label" parent="Cartel flechas"]
 margin_left = -665.0
 margin_top = 602.0
 margin_right = -501.0
@@ -316,9 +307,16 @@ __meta__ = {
 
 [node name="Sprites_frente" type="Node" parent="."]
 
-[node name="Sprite-0asdsafasfNoche" type="Sprite" parent="Sprites_frente"]
-position = Vector2( -149, 491 )
-scale = Vector2( 0.891753, 0.891753 )
+[node name="arbol estandar" type="Sprite" parent="Sprites_frente"]
+light_mask = 0
+position = Vector2( -1214, 589 )
+scale = Vector2( 1.07143, 1.07143 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -26 )
+
+[node name="arbol redondo" type="Sprite" parent="Sprites_frente"]
+position = Vector2( -111, 548 )
+scale = Vector2( 1.04087, 1.04087 )
 texture = ExtResource( 5 )
 
 [node name="Characters" type="Node2D" parent="."]
@@ -328,13 +326,6 @@ position = Vector2( -1100, 703 )
 
 [node name="Enemy-Trident" parent="Characters" instance=ExtResource( 2 )]
 position = Vector2( 1798, 497 )
-
-[node name="Ground" type="StaticBody2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2( 2018, 1014 )
-shape = SubResource( 2 )
 
 [node name="ParedInvisibleInicio" type="StaticBody2D" parent="."]
 
