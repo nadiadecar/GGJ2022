@@ -989,6 +989,7 @@ volume_db = -20.101
 
 [node name="sonido_recibir_danio" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 11 )
+volume_db = -22.723
 
 [node name="sonido_salto_humano" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 9 )
