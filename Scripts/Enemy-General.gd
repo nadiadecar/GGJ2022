@@ -27,7 +27,8 @@ func set_damage(dam):
 func _physics_process(delta) -> void:
 	# MOVIMIENTO
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
-	lineal_vel.y += GRAVITY * delta
+	if lineal_vel.x == 0: 
+		lineal_vel.y += GRAVITY * delta
 	
 	
 	if player: 

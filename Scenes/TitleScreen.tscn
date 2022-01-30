@@ -126,10 +126,12 @@ playing = true
 flip_h = true
 
 [node name="StartButton" type="Button" parent="."]
+
 margin_left = 330.0
 margin_top = 565.0
 margin_right = 713.0
 margin_bottom = 678.0
+
 rect_scale = Vector2( 1.3, 1.3 )
 custom_fonts/font = SubResource( 2 )
 text = "iniciar"

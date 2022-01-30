@@ -18,7 +18,7 @@ func _ready():
 
 func enemeiesCreate(): 
 	
-	if pos_player.x > 860 and not player.dead: 
+	if pos_player.x > 1060 and not player.dead: 
 		var pos_x = random.randi_range(860,15400)
 		var type = random.randi_range(0,1)
 		var enemy
