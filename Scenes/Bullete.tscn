@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Bullete.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Assets/balita.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Assets/balita_noche.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.0
