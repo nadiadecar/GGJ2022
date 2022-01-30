@@ -4,6 +4,7 @@ extends Node2D
 onready var player = $"Characters/Prota"
 onready var constant = $"Constant"
 onready var GameOverText = $"Constant/Game Over"
+onready var fondo = $Fondo
 
 onready var timer = $EnemiesCreator
 
@@ -37,6 +38,7 @@ func _physics_process(delta):
 	pos_player = player.position
 	
 	constant.position = Vector2(pos_player.x , pos_player.y - 276)
+	fondo.position = constant.position
 	if Input.is_action_pressed("restart") and player.dead: 
 		print("lo pesca")
 		get_tree().change_scene("res://Scenes/Principal.tscn")

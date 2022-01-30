@@ -15,6 +15,7 @@
 [ext_resource path="res://Sprites/Background/BUT_noche.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Background/WAYAYAY_noche.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Background/arbusticos_noche.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Background/fondo_noche.png" type="Texture" id=17]
 
 [sub_resource type="DynamicFont" id=19]
 size = 18
@@ -28,33 +29,6 @@ points = PoolVector2Array( 0, 0, 112, 0, 112, 112, 0, 112 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 112, 0, 112, 112, 0, 112 )
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 224, 224, 0, 224, 0, 112 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 0, 168, 0, 168, 224, 224, 0, 224 )
-
-[sub_resource type="ConvexPolygonShape2D" id=31]
-points = PoolVector2Array( 0, 112, 224, 224, 0, 224 )
-
-[sub_resource type="ConvexPolygonShape2D" id=24]
-points = PoolVector2Array( 0, 168, 224, 224, 0, 224 )
-
-[sub_resource type="ConvexPolygonShape2D" id=29]
-points = PoolVector2Array( 0, 224, 112, 224, 112, 280, 0, 280 )
-
-[sub_resource type="ConvexPolygonShape2D" id=26]
-points = PoolVector2Array( 112, 280, 0, 280, 0, 224, 112, 224 )
-
-[sub_resource type="ConvexPolygonShape2D" id=27]
-points = PoolVector2Array( 0, 168, 224, 224, 0, 224 )
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
-points = PoolVector2Array( 224, 224, 0, 224, 0, 168 )
-
-[sub_resource type="ConvexPolygonShape2D" id=30]
-points = PoolVector2Array( 224, 280, 0, 280, 0, 224 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 112, 0, 112, 112, 0, 112 )
@@ -595,6 +569,9 @@ points = PoolVector2Array( 0, 112, 224, 56, 224, 112 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 9 )
+
+[node name="Fondo" type="Sprite" parent="."]
+texture = ExtResource( 12 )
 
 [node name="cartel zx" type="Node" parent="."]
 
