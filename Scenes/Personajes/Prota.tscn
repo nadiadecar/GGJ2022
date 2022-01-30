@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://Scripts/Prota.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Werewolf/lobo_iddle_1.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Sprites/Werewolf/wereguol jump-Sheet.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Werewolf/wereguol pelea-Sheet-Sheet.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Werewolf/wereguol dano-Sheet.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/fondo_noche.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sfx/sonido_salto_humano.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sfx/sonido_salto_lobo.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sfx/sonido_recibir_danio.wav" type="AudioStream" id=11]
@@ -1500,10 +1499,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
-
-[node name="fondo_noche" parent="." instance=ExtResource( 8 )]
-position = Vector2( -27, -269 )
-scale = Vector2( 1.03683, 1.03683 )
 
 [node name="Sfx" type="Node" parent="."]
 
