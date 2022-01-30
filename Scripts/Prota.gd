@@ -6,18 +6,22 @@ var GRAVITY = 600
 var lineal_vel = Vector2.ZERO
 var SPEED = 300
 var ACCELERATION = 1
+
 var to_right = true
 var can_jump = true
 var can_attack = true
 var is_wolf = true
 var upcoming_change = false 
-var on_floor
-var collider 
 var walking = false
 var waiting = false
 var jumped = false
 var attacked = false 
 var got_attacked = false
+var dead = false 
+
+var on_floor
+var collider 
+
 signal game_over
 
 onready var timer = $Timer
@@ -93,58 +97,65 @@ func _physics_process(delta) -> void:
 	
 	on_floor = is_on_floor()
 	
-	get_movement()
-	lineal_vel = move_and_slide(lineal_vel)
-	lineal_vel.x = 0
-		
-	if Input.is_action_pressed("attack") and can_attack:
-		if is_wolf:
-			attacked = true
-			can_attack = false 
-			lineal_vel.x = 0
-			wolf_attack()
+	if not dead: 
+		get_movement()
+		lineal_vel = move_and_slide(lineal_vel)
+		lineal_vel.x = 0
 			
-			
+		if Input.is_action_pressed("attack") and can_attack:
+			if is_wolf:
+				attacked = true
+				can_attack = false 
+				lineal_vel.x = 0
+				wolf_attack()
+				
+				
 
-	#Animations 
-	if on_floor and not attacked: 
-		if abs(lineal_vel.x) <= 0 and not jumped:
-			if to_right:
-				playback.travel("Idle-Right")
-			else:
-				playback.travel("Idle-Left")
-		if walking and can_jump: 
+		#Animations 
+		if on_floor and not attacked: 
+			if abs(lineal_vel.x) <= 0 and not jumped:
+				if to_right:
+					playback.travel("Idle-Right")
+				else:
+					playback.travel("Idle-Left")
+			if walking and can_jump: 
+				if to_right: 
+					playback.travel("Walking-Right")
+				else: 
+					playback.travel("Walking-Left")
+		if jumped: 
 			if to_right: 
-				playback.travel("Walking-Right")
+				playback.travel("Jumping-Right")
 			else: 
-				playback.travel("Walking-Left")
-	if jumped: 
-		if to_right: 
-			playback.travel("Jumping-Right")
-		else: 
-			playback.travel("Jumping-Left")
+				playback.travel("Jumping-Left")
+				
+		if attacked: 
+			if to_right:
+				playback.travel("Attack-Right")
+			else: 
+				playback.travel("Attack-Left")
 			
-	if attacked: 
-		if to_right:
-			playback.travel("Attack-Right")
-		else: 
-			playback.travel("Attack-Left")
+		if got_attacked: 
+			if to_right: 
+				playback.travel("Damage-Right")
+			else:
+				playback.travel("Damage-Left")
+			
+		walking = false 
 		
-	if got_attacked: 
+		if lineal_vel.y == 0: 
+			jumped = false
+		
+		if Input.is_action_just_released("attack") and not waiting:
+			waiting = true 
+			timer.set_wait_time(1)
+			timer.start()
+	
+	if dead: 
 		if to_right: 
-			playback.travel("Damage-Right")
+			playback.travel("Dead-Right")
 		else:
-			playback.travel("Damage-Left")
-		
-	walking = false 
-	
-	if lineal_vel.y == 0: 
-		jumped = false
-	
-	if Input.is_action_just_released("attack") and not waiting:
-		waiting = true 
-		timer.set_wait_time(1)
-		timer.start()
+			playback.travel("Dead-Left")
 	
 
 func _on_Timer_timeout():
