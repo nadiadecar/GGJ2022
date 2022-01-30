@@ -251,7 +251,7 @@ points = PoolVector2Array( 0, 112, 224, 56, 224, 112 )
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Prota" parent="Characters" instance=ExtResource( 1 )]
-position = Vector2( 476, 391 )
+position = Vector2( 126, 252 )
 
 [node name="Enemy-Trident" parent="Characters" instance=ExtResource( 2 )]
 position = Vector2( 2704, 698 )
