@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lobo_iddle_2.png-6d3d5530494c0254be48b093a5dba753.stex"
+path="res://.import/monje-Sheet_noche.png-a53648311cbb4e26b6c64474a9c1da00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Werewolf/lobo_iddle_2.png"
-dest_files=[ "res://.import/lobo_iddle_2.png-6d3d5530494c0254be48b093a5dba753.stex" ]
+source_file="res://Sprites/Enemies/monje-Sheet_noche.png"
+dest_files=[ "res://.import/monje-Sheet_noche.png-a53648311cbb4e26b6c64474a9c1da00.stex" ]
 
 [params]
 

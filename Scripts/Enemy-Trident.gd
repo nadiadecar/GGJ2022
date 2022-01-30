@@ -1,7 +1,7 @@
 extends "res://Scripts/Enemy-General.gd"
 
 func _ready():
-	self.set_damage(200)
+	self.set_damage(100)
 	$AnimationTree.active = true
 	get_node("AnimationPlayer")
 

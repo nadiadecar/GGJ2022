@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Monjas daño -Sheet.png-38ceb1288cd84ab717a1b1b78a5f2c0c.stex"
+path="res://.import/humano_idle-Sheet-export.png-86292cd9842808e325fc62409d07a432.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Nun/Monjas daño -Sheet.png"
-dest_files=[ "res://.import/Monjas daño -Sheet.png-38ceb1288cd84ab717a1b1b78a5f2c0c.stex" ]
+source_file="res://Sprites/Human/humano_idle-Sheet-export.png"
+dest_files=[ "res://.import/humano_idle-Sheet-export.png-86292cd9842808e325fc62409d07a432.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

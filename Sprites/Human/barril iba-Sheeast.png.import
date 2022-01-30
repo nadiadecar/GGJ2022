@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lobo_iddle_2.png-6d3d5530494c0254be48b093a5dba753.stex"
+path="res://.import/barril iba-Sheeast.png-c99ac9b0c5cfca15d35a1bf69a192968.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Werewolf/lobo_iddle_2.png"
-dest_files=[ "res://.import/lobo_iddle_2.png-6d3d5530494c0254be48b093a5dba753.stex" ]
+source_file="res://Sprites/Human/barril iba-Sheeast.png"
+dest_files=[ "res://.import/barril iba-Sheeast.png-c99ac9b0c5cfca15d35a1bf69a192968.stex" ]
 
 [params]
 
