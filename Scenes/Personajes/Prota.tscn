@@ -4,13 +4,14 @@
 [ext_resource path="res://Sprites/Werewolf/lobo_iddle_1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Werewolf/lobo_iddle_2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Werewolf/wereguol walkin dei nai -Sheet.png" type="Texture" id=4]
-[ext_resource path="res://Sfx/sonido_golpe.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sprites/Werewolf/wereguol jump-Sheet.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Werewolf/wereguol pelea-Sheet-Sheet.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Werewolf/wereguol dano-Sheet.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/fondo_noche.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sfx/sonido_salto_humano.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sfx/sonido_salto_lobo.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sfx/sonido_recibir_danio.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sfx/sonido_golpe.wav" type="AudioStream" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 34.0
@@ -482,10 +483,6 @@ tracks/5/keys = {
 "values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
 }
 
-[sub_resource type="StreamTexture" id=77]
-flags = 4
-load_path = "res://.import/wereguol jump-Sheet.png-6f726867231add0a3ef2508ea4f294de.stex"
-
 [sub_resource type="Animation" id=54]
 resource_name = "Jumping-Left"
 step = 0.3
@@ -510,10 +507,8 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-
-"update": 1,
-"values": [ SubResource( 77 ) ]
-
+"update": 0,
+"values": [ false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:scale")
@@ -588,8 +583,8 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ SubResource( 77 ) ]
+"update": 0,
+"values": [ true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:scale")
@@ -984,19 +979,20 @@ script = ExtResource( 1 )
 [node name="Sfx" type="Node" parent="."]
 
 [node name="sonido_golpe" type="AudioStreamPlayer" parent="Sfx"]
-stream = ExtResource( 5 )
-volume_db = -20.101
+stream = ExtResource( 12 )
+volume_db = -30.0
 
 [node name="sonido_recibir_danio" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 11 )
-volume_db = -22.723
+volume_db = -30.0
 
 [node name="sonido_salto_humano" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 9 )
+volume_db = -30.0
 
 [node name="sonido_salto_lobo" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 10 )
-volume_db = -15.731
+volume_db = -30.0
 
 [node name="fondo_noche" parent="." instance=ExtResource( 8 )]
 position = Vector2( 0, -253 )

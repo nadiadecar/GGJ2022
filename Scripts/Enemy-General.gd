@@ -15,8 +15,8 @@ signal game_over
 
 
 onready var timer = $Timer
-onready var attacked_timer = $attackedTimer 
 onready var playback = $AnimationTree.get("parameters/playback")
+onready var attacked_timer = $attackedTimer
 
 func set_attacked(val): 
 	attacked = val
@@ -39,14 +39,11 @@ func _physics_process(delta) -> void:
 		move = Vector2.ZERO
 	
 	if attacked: 
-		print("atacado")
 		if to_right: 
 			playback.travel("Damage-Right")
 		else: 
 			playback.travel("Damage-Left")
-			
-		attacked_timer.set_wait_time(0.5)
-		attacked_timer.start()
+	
 	else: 
 		if to_right: 
 			playback.travel("Base-Right")
@@ -62,9 +59,9 @@ func recive_damage(damage):
 	HP -= damage 
 	set_attacked(true)
 	print("Enemy life:" , HP)
-	if HP <= 0: 
-		dead = true 
-		get_parent().remove_child(self)
+	attacked_timer.set_wait_time(1)
+	attacked_timer.start()
+	
 	
 
 func _on_Area2D_body_entered(body):

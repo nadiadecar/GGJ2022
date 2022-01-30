@@ -51,7 +51,7 @@ func get_movement():
 
 
 func wolf_attack():
-	$"Sfx/sonido_golpe".play()
+	
 	collider = false
 	
 	var collision = false
@@ -61,13 +61,15 @@ func wolf_attack():
 			collider = $"attack-right/ray-right".get_collider()
 			collision = true
 	else: 
-		if $"attack-right/ray-right".is_colliding():
-			collider = $"attack-right/ray-right".get_collider()
+		if $"attack-left/ray-left".is_colliding():
+			collider = $"attack-left/ray-left".get_collider()
 			collision = true 
 
 	if collision:
 		if collider.is_in_group("enemy"): 
 			collider.recive_damage(400)
+		
+	$"Sfx/sonido_golpe".play()
 
 
 func recive_damage(damage): 

@@ -18,9 +18,9 @@ func _on_tridentleft_body_entered(body):
 
 
 func damage_prota(): 
-	if prota.HP > 0: 
+	if prota.HP > 0 and abs(prota.position.x - position.x) < 125: 
 		prota.recive_damage(DAMAGE)
-		timer.set_wait_time(1.5)
+		timer.set_wait_time(1.75)
 		timer.start()
 	else: 
 		emit_signal("game_over")
@@ -33,4 +33,7 @@ func _on_Timer_timeout():
 
 func _on_attackedTimer_timeout():
 	attacked_timer.stop()
-	self.set_attacked(false) 
+	set_attacked(false)
+	if HP <= 0: 
+		dead = true 
+		get_parent().remove_child(self)
