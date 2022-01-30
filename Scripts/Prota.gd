@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 
 var HP = 1000
-var GRAVITY = 600
+var GRAVITY = 1200
 var lineal_vel = Vector2.ZERO
-var SPEED = 300
+var SPEED = 400
 var ACCELERATION = 1
 
 var to_right = true
@@ -36,9 +36,9 @@ func _ready() -> void:
 
 func get_movement():
 	if Input.is_action_pressed("jump") and can_jump and not jumped:
-		$"Sfx/sonido_salto_lobo".play() 
+		$"Sfx/sonido_salto_lobo".play()
 		can_jump = false 
-		lineal_vel.y = -SPEED
+		lineal_vel.y = -SPEED*0.9
 		jumped = true
 
 	if Input.is_action_just_released("jump") and not can_jump:
@@ -70,12 +70,16 @@ func wolf_attack():
 		if $"attack-left/ray-left".is_colliding():
 			collider = $"attack-left/ray-left".get_collider()
 			collision = true 
-
+	
 	if collision:
 		if collider.is_in_group("enemy"): 
 			collider.recive_damage(400)
 		
 	$"Sfx/sonido_golpe".play()
+	if to_right:
+		playback.travel("Attack-Right")
+	else: 
+		playback.travel("Attack-Left")
 
 
 func recive_damage(damage): 
@@ -129,11 +133,7 @@ func _physics_process(delta) -> void:
 			else: 
 				playback.travel("Jumping-Left")
 				
-		if attacked: 
-			if to_right:
-				playback.travel("Attack-Right")
-			else: 
-				playback.travel("Attack-Left")
+
 			
 		if got_attacked: 
 			if to_right: 

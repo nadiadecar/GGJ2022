@@ -328,7 +328,7 @@ texture = ExtResource( 5 )
 position = Vector2( -1100, 703 )
 
 [node name="Enemy-Trident" parent="Characters" instance=ExtResource( 2 )]
-position = Vector2( 1798, 497 )
+position = Vector2( 2027, 141 )
 
 [node name="ParedInvisibleInicio" type="StaticBody2D" parent="."]
 
@@ -358,4 +358,7 @@ z_index = 1
 [node name="Camera2D" type="Camera2D" parent="Constant"]
 current = true
 
+[node name="EnemiesCreator" type="Timer" parent="."]
+
 [connection signal="game_over" from="Characters/Prota" to="." method="_on_Prota_game_over"]
+[connection signal="timeout" from="EnemiesCreator" to="." method="_on_EnemiesCreator_timeout"]
