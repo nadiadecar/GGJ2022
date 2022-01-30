@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://Scripts/Prota.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Werewolf/lobo_iddle_1.png" type="Texture" id=2]
@@ -884,6 +884,12 @@ animation = "Attack-Left"
 [sub_resource type="AnimationNodeAnimation" id=68]
 animation = "Attack-Right"
 
+[sub_resource type="AnimationNodeAnimation" id=77]
+animation = "Damage-Left"
+
+[sub_resource type="AnimationNodeAnimation" id=78]
+animation = "Damage-Right"
+
 [sub_resource type="AnimationNodeAnimation" id=42]
 animation = "Idle-Left"
 
@@ -950,11 +956,35 @@ animation = "Walking-Right"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=76]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=79]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=80]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=81]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=82]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=83]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=84]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=85]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=86]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=87]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=88]
+
 [sub_resource type="AnimationNodeStateMachine" id=40]
 states/Attack-Left/node = SubResource( 67 )
 states/Attack-Left/position = Vector2( 707, 228.08 )
 states/Attack-Right/node = SubResource( 68 )
 states/Attack-Right/position = Vector2( 324.6, 452.401 )
+states/Damage-Left/node = SubResource( 77 )
+states/Damage-Left/position = Vector2( 343.319, 225.438 )
+states/Damage-Right/node = SubResource( 78 )
+states/Damage-Right/position = Vector2( 491.319, 251.438 )
 states/Idle-Left/node = SubResource( 42 )
 states/Idle-Left/position = Vector2( 265.4, 16.6 )
 states/Idle-Right/node = SubResource( 39 )
@@ -967,9 +997,9 @@ states/Walking-Left/node = SubResource( 46 )
 states/Walking-Left/position = Vector2( 571.96, 16.28 )
 states/Walking-Right/node = SubResource( 47 )
 states/Walking-Right/position = Vector2( 24.6, 227.8 )
-transitions = [ "Idle-Right", "Idle-Left", SubResource( 43 ), "Idle-Left", "Idle-Right", SubResource( 44 ), "Idle-Right", "Walking-Right", SubResource( 48 ), "Walking-Right", "Idle-Right", SubResource( 49 ), "Idle-Left", "Walking-Left", SubResource( 50 ), "Walking-Left", "Idle-Left", SubResource( 51 ), "Walking-Right", "Walking-Left", SubResource( 52 ), "Walking-Left", "Walking-Right", SubResource( 53 ), "Walking-Right", "Jumping-Right", SubResource( 59 ), "Jumping-Right", "Walking-Right", SubResource( 60 ), "Walking-Left", "Jumping-Left", SubResource( 61 ), "Jumping-Left", "Walking-Left", SubResource( 62 ), "Jumping-Left", "Idle-Left", SubResource( 63 ), "Idle-Left", "Jumping-Left", SubResource( 64 ), "Idle-Right", "Jumping-Right", SubResource( 65 ), "Jumping-Right", "Idle-Right", SubResource( 66 ), "Idle-Left", "Attack-Left", SubResource( 69 ), "Attack-Left", "Idle-Left", SubResource( 70 ), "Walking-Left", "Attack-Left", SubResource( 71 ), "Attack-Left", "Walking-Left", SubResource( 72 ), "Attack-Right", "Walking-Right", SubResource( 73 ), "Attack-Right", "Idle-Right", SubResource( 74 ), "Idle-Right", "Attack-Right", SubResource( 75 ), "Walking-Right", "Attack-Right", SubResource( 76 ) ]
+transitions = [ "Idle-Right", "Idle-Left", SubResource( 43 ), "Idle-Left", "Idle-Right", SubResource( 44 ), "Idle-Right", "Walking-Right", SubResource( 48 ), "Walking-Right", "Idle-Right", SubResource( 49 ), "Idle-Left", "Walking-Left", SubResource( 50 ), "Walking-Left", "Idle-Left", SubResource( 51 ), "Walking-Right", "Walking-Left", SubResource( 52 ), "Walking-Left", "Walking-Right", SubResource( 53 ), "Walking-Right", "Jumping-Right", SubResource( 59 ), "Jumping-Right", "Walking-Right", SubResource( 60 ), "Walking-Left", "Jumping-Left", SubResource( 61 ), "Jumping-Left", "Walking-Left", SubResource( 62 ), "Jumping-Left", "Idle-Left", SubResource( 63 ), "Idle-Left", "Jumping-Left", SubResource( 64 ), "Idle-Right", "Jumping-Right", SubResource( 65 ), "Jumping-Right", "Idle-Right", SubResource( 66 ), "Idle-Left", "Attack-Left", SubResource( 69 ), "Attack-Left", "Idle-Left", SubResource( 70 ), "Walking-Left", "Attack-Left", SubResource( 71 ), "Attack-Left", "Walking-Left", SubResource( 72 ), "Attack-Right", "Walking-Right", SubResource( 73 ), "Attack-Right", "Idle-Right", SubResource( 74 ), "Idle-Right", "Attack-Right", SubResource( 75 ), "Walking-Right", "Attack-Right", SubResource( 76 ), "Idle-Left", "Damage-Right", SubResource( 79 ), "Damage-Right", "Idle-Left", SubResource( 80 ), "Walking-Left", "Damage-Right", SubResource( 81 ), "Attack-Left", "Damage-Right", SubResource( 82 ), "Jumping-Left", "Damage-Right", SubResource( 83 ), "Attack-Right", "Damage-Left", SubResource( 84 ), "Jumping-Right", "Damage-Left", SubResource( 85 ), "Walking-Right", "Damage-Left", SubResource( 86 ), "Damage-Left", "Idle-Right", SubResource( 87 ), "Idle-Right", "Damage-Left", SubResource( 88 ) ]
 start_node = "Idle-Right"
-graph_offset = Vector2( -107.681, 45.6006 )
+graph_offset = Vector2( -107.681, -19.5617 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=41]
 
@@ -1037,6 +1067,8 @@ shape = SubResource( 4 )
 position = Vector2( 0, -253 )
 current = true
 
+[node name="attackedTimer" type="Timer" parent="."]
+
 [node name="Timer" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1057,4 +1089,5 @@ tree_root = SubResource( 40 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 41 )
 
+[connection signal="timeout" from="attackedTimer" to="." method="_on_attackedTimer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

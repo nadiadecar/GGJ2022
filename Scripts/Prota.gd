@@ -17,9 +17,11 @@ var walking = false
 var waiting = false
 var jumped = false
 var attacked = false 
+var got_attacked = false
 signal game_over
 
 onready var timer = $Timer
+onready var attacked_timer = $attackedTimer
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func _ready() -> void:
@@ -75,6 +77,9 @@ func wolf_attack():
 func recive_damage(damage): 
 	$"Sfx/sonido_recibir_danio".play()
 	HP -= damage 
+	got_attacked = true
+	attacked_timer.set_wait_time(1)
+	attacked_timer.start()
 	print(HP)
 	if HP <= 0: 
 		emit_signal("game_over")
@@ -125,7 +130,12 @@ func _physics_process(delta) -> void:
 		else: 
 			playback.travel("Attack-Left")
 		
-	
+	if got_attacked: 
+		if to_right: 
+			playback.travel("Damage-Right")
+		else:
+			playback.travel("Damage-Left")
+		
 	walking = false 
 	
 	if lineal_vel.y == 0: 
@@ -142,3 +152,8 @@ func _on_Timer_timeout():
 	can_attack = true
 	waiting = false
 	attacked = false 
+
+
+func _on_attackedTimer_timeout():
+	attacked_timer.stop()
+	got_attacked = false
