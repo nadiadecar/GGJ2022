@@ -1502,8 +1502,8 @@ __meta__ = {
 }
 
 [node name="fondo_noche" parent="." instance=ExtResource( 8 )]
-visible = false
-position = Vector2( 0, -253 )
+position = Vector2( -27, -269 )
+scale = Vector2( 1.03683, 1.03683 )
 
 [node name="Sfx" type="Node" parent="."]
 

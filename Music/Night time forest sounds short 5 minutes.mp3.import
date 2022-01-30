@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Night time forest sounds short 5 minutes.mp3-56d1f5285b07e6a611d4c48787755d45.mp3str"
+
+[deps]
+
+source_file="res://Music/Night time forest sounds short 5 minutes.mp3"
+dest_files=[ "res://.import/Night time forest sounds short 5 minutes.mp3-56d1f5285b07e6a611d4c48787755d45.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
