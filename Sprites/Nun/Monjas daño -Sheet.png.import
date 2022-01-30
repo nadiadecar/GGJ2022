@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy.png-4a87218af7c133d9f5f0a085c1ea0486.stex"
+path="res://.import/Monjas daño -Sheet.png-38ceb1288cd84ab717a1b1b78a5f2c0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Werewolf/Enemy.png"
-dest_files=[ "res://.import/Enemy.png-4a87218af7c133d9f5f0a085c1ea0486.stex" ]
+source_file="res://Sprites/Nun/Monjas daño -Sheet.png"
+dest_files=[ "res://.import/Monjas daño -Sheet.png-38ceb1288cd84ab717a1b1b78a5f2c0c.stex" ]
 
 [params]
 

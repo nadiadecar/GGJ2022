@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 var HP = 1000
-var GRAVITY = 400
+var GRAVITY = 600
 var lineal_vel = Vector2.ZERO
 var SPEED = 300
 var ACCELERATION = 1
@@ -29,7 +29,7 @@ func _ready() -> void:
 
 
 func get_movement():
-	if on_floor and Input.is_action_pressed("jump") and can_jump:
+	if Input.is_action_pressed("jump") and can_jump and not jumped: 
 		can_jump = false 
 		lineal_vel.y = -SPEED
 		jumped = true
@@ -91,7 +91,9 @@ func _physics_process(delta) -> void:
 		if is_wolf:
 			attacked = true
 			can_attack = false 
+			lineal_vel.x = 0
 			wolf_attack()
+			
 			
 
 	#Animations 
@@ -118,8 +120,11 @@ func _physics_process(delta) -> void:
 		else: 
 			playback.travel("Attack-Left")
 		
-	jumped = false
+	
 	walking = false 
+	
+	if lineal_vel.y == 0: 
+		jumped = false
 	
 	if Input.is_action_just_released("attack") and not waiting:
 		waiting = true 
