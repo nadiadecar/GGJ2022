@@ -121,7 +121,6 @@ position = Vector2( 1061, 569.031 )
 scale = Vector2( 3.55329, 3.55329 )
 frames = SubResource( 1 )
 animation = "iddle_lobo"
-frame = 1
 playing = true
 flip_h = true
 
