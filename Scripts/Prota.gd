@@ -27,10 +27,15 @@ signal game_over
 onready var timer = $Timer
 onready var attacked_timer = $attackedTimer
 onready var playback = $AnimationTree.get("parameters/playback")
+onready var world = get_parent().get_parent()
+onready var playbackBarra = world.get_node("Constant/AnimationTree").get("parameters/playback")
 
 func _ready() -> void:
 	$AnimationTree.active = true
+	world.get_node("Constant/AnimationTree").active = true
+	world.get_node("Constant/AnimationPlayer")
 	get_node("AnimationPlayer")
+	
 
 
 
@@ -85,6 +90,7 @@ func wolf_attack():
 func recive_damage(damage): 
 	$"Sfx/sonido_recibir_danio".play()
 	HP -= damage 
+	playbackBarra.travel(String(HP/100))
 	got_attacked = true
 	attacked_timer.set_wait_time(1)
 	attacked_timer.start()

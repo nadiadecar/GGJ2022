@@ -189,8 +189,9 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=15]
 resource_name = "Damage"
-length = 0.3
+length = 0.6
 loop = true
+step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("BarraVida:frame")
 tracks/0/interp = 1
@@ -198,7 +199,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 11, 12, 11 ]
@@ -269,43 +270,53 @@ animation = "Damage"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=28]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=29]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=31]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=32]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=33]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=34]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=35]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=36]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=37]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=38]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=39]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=40]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=41]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=42]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=43]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=44]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=45]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=46]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=47]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=52]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=54]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=3]
 states/0/node = SubResource( 16 )
@@ -332,7 +343,7 @@ states/9/node = SubResource( 26 )
 states/9/position = Vector2( 241, 55 )
 states/Damage/node = SubResource( 27 )
 states/Damage/position = Vector2( 1092, 515 )
-transitions = [ "10", "Damage", SubResource( 28 ), "Damage", "9", SubResource( 29 ), "Damage", "8", SubResource( 30 ), "9", "Damage", SubResource( 31 ), "Damage", "7", SubResource( 32 ), "8", "Damage", SubResource( 33 ), "Damage", "6", SubResource( 34 ), "7", "Damage", SubResource( 35 ), "Damage", "5", SubResource( 36 ), "6", "Damage", SubResource( 37 ), "Damage", "4", SubResource( 38 ), "5", "Damage", SubResource( 39 ), "Damage", "3", SubResource( 40 ), "4", "Damage", SubResource( 41 ), "Damage", "2", SubResource( 42 ), "3", "Damage", SubResource( 43 ), "Damage", "1", SubResource( 44 ), "2", "Damage", SubResource( 45 ), "Damage", "0", SubResource( 46 ), "1", "Damage", SubResource( 47 ) ]
+transitions = [ "10", "Damage", SubResource( 28 ), "8", "Damage", SubResource( 33 ), "7", "Damage", SubResource( 35 ), "6", "Damage", SubResource( 37 ), "5", "Damage", SubResource( 39 ), "4", "Damage", SubResource( 41 ), "3", "Damage", SubResource( 43 ), "2", "Damage", SubResource( 45 ), "1", "Damage", SubResource( 47 ), "9", "Damage", SubResource( 48 ), "Damage", "0", SubResource( 49 ), "Damage", "1", SubResource( 50 ), "Damage", "2", SubResource( 51 ), "Damage", "3", SubResource( 52 ), "Damage", "4", SubResource( 53 ), "Damage", "5", SubResource( 54 ), "Damage", "6", SubResource( 55 ), "Damage", "7", SubResource( 56 ), "Damage", "8", SubResource( 57 ), "Damage", "9", SubResource( 58 ) ]
 start_node = "10"
 end_node = "0"
 
