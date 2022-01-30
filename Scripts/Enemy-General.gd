@@ -7,11 +7,14 @@ var prota
 var player
 var move = Vector2.ZERO
 var SPEED = 200
-var DAMAGE = 200
+var DAMAGE 
 var dead = false 
 signal game_over
 
 onready var timer = $Timer
+
+func set_damage(dam): 
+	DAMAGE = dam
 
 func _physics_process(delta) -> void:
 	# MOVIMIENTO
@@ -28,6 +31,7 @@ func _physics_process(delta) -> void:
 
 func recive_damage(damage): 
 	HP -= damage 
+	print(HP)
 	if HP <= 0: 
 		dead = true 
 		get_parent().remove_child(self)

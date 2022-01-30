@@ -13,7 +13,10 @@ var is_wolf = true
 var upcoming_change = false 
 var on_floor
 var collider 
+var waiting = false
 signal game_over
+
+onready var timer = $Timer
 
 func _ready() -> void:
 	pass
@@ -84,5 +87,14 @@ func _physics_process(delta) -> void:
 			can_attack = false
 			wolf_attack()
 			
-	if Input.is_action_just_released("attack"):
-		can_attack = true 
+	if Input.is_action_just_released("attack") and not waiting:
+		waiting = true 
+		timer.set_wait_time(1)
+		timer.start()
+		 
+
+
+func _on_Timer_timeout():
+	timer.stop()
+	can_attack = true
+	waiting = false

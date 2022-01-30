@@ -13,7 +13,7 @@ extents = Vector2( 2418.25, 71.5 )
 [node name="Prota" parent="Characters" instance=ExtResource( 1 )]
 position = Vector2( 476, 391 )
 
-[node name="Enemy" parent="Characters" instance=ExtResource( 2 )]
+[node name="Enemy-Trident" parent="Characters" instance=ExtResource( 2 )]
 position = Vector2( 1522, 643 )
 
 [node name="Ground" type="StaticBody2D" parent="."]
