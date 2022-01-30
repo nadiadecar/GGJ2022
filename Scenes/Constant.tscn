@@ -1,0 +1,375 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Assets/vida lol-SheetGREEN.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=5]
+resource_name = "0"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "10"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "2"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "3"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "4"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "5"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "6"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "7"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "8"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "9"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BarraVida:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Damage"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 11, 12, 11 ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("BarraVida:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 13 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BarraVida:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "0"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "1"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "10"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "2"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "3"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "4"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "5"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "6"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "7"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "8"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "9"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "Damage"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+
+[sub_resource type="AnimationNodeStateMachine" id=3]
+states/0/node = SubResource( 16 )
+states/0/position = Vector2( 1962, 114 )
+states/1/node = SubResource( 17 )
+states/1/position = Vector2( 1828, 87 )
+states/10/node = SubResource( 18 )
+states/10/position = Vector2( 48, 62 )
+states/2/node = SubResource( 19 )
+states/2/position = Vector2( 1646, 62 )
+states/3/node = SubResource( 20 )
+states/3/position = Vector2( 1483, 55 )
+states/4/node = SubResource( 21 )
+states/4/position = Vector2( 1296, 62 )
+states/5/node = SubResource( 22 )
+states/5/position = Vector2( 1092, 55 )
+states/6/node = SubResource( 23 )
+states/6/position = Vector2( 865, 62 )
+states/7/node = SubResource( 24 )
+states/7/position = Vector2( 653, 55 )
+states/8/node = SubResource( 25 )
+states/8/position = Vector2( 420, 62 )
+states/9/node = SubResource( 26 )
+states/9/position = Vector2( 241, 55 )
+states/Damage/node = SubResource( 27 )
+states/Damage/position = Vector2( 1092, 515 )
+transitions = [ "10", "Damage", SubResource( 28 ), "Damage", "9", SubResource( 29 ), "Damage", "8", SubResource( 30 ), "9", "Damage", SubResource( 31 ), "Damage", "7", SubResource( 32 ), "8", "Damage", SubResource( 33 ), "Damage", "6", SubResource( 34 ), "7", "Damage", SubResource( 35 ), "Damage", "5", SubResource( 36 ), "6", "Damage", SubResource( 37 ), "Damage", "4", SubResource( 38 ), "5", "Damage", SubResource( 39 ), "Damage", "3", SubResource( 40 ), "4", "Damage", SubResource( 41 ), "Damage", "2", SubResource( 42 ), "3", "Damage", SubResource( 43 ), "Damage", "1", SubResource( 44 ), "2", "Damage", SubResource( 45 ), "Damage", "0", SubResource( 46 ), "1", "Damage", SubResource( 47 ) ]
+start_node = "10"
+end_node = "0"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+
+[node name="Constant" type="Node2D"]
+z_index = 1
+
+[node name="Game Over" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -784, -448 )
+z_index = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="BarraVida" type="Sprite" parent="."]
+position = Vector2( -723, -370 )
+texture = ExtResource( 3 )
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/0 = SubResource( 5 )
+anims/1 = SubResource( 6 )
+anims/10 = SubResource( 7 )
+anims/2 = SubResource( 8 )
+anims/3 = SubResource( 9 )
+anims/4 = SubResource( 10 )
+anims/5 = SubResource( 11 )
+anims/6 = SubResource( 12 )
+anims/7 = SubResource( 13 )
+anims/8 = SubResource( 14 )
+anims/9 = SubResource( 1 )
+anims/Damage = SubResource( 15 )
+anims/RESET = SubResource( 2 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 3 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 4 )
