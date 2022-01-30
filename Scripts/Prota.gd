@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 
-var life = 1000
+var HP = 1000
 var GRAVITY = 400
 var lineal_vel = Vector2.ZERO
-var SPEED = 200
+var SPEED = 300
 var ACCELERATION = 1
 var to_right = true
 var can_jump = true
@@ -13,8 +13,7 @@ var is_wolf = true
 var upcoming_change = false 
 var on_floor
 var collider 
-var kills = 0
-signal end_game 
+signal game_over
 
 func _ready() -> void:
 	pass
@@ -33,18 +32,20 @@ func get_movement():
 
 	if Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
 		to_right = true
-		lineal_vel.x += 300
+		lineal_vel.x += SPEED
 
 
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
 		to_right = false
-		lineal_vel.x -= 300
+		lineal_vel.x -= SPEED
 
 
 
 func wolf_attack():
 	collider = false
+	
 	var collision = false
+	
 	if to_right: 
 		if $"attack-right/ray-right".is_colliding():
 			collider = $"attack-right/ray-right".get_collider()
@@ -56,10 +57,14 @@ func wolf_attack():
 
 	if collision:
 		if collider.is_in_group("enemy"): 
-			get_parent().remove_child(collider)
-			kills += 1
-			if kills == 100: 
-				emit_signal("end_game")
+			collider.recive_damage(400)
+
+
+func recive_damage(damage): 
+	HP -= damage 
+	print(HP)
+	if HP <= 0: 
+		emit_signal("game_over")
 
 
 

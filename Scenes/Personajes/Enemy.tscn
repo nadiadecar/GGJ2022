@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/Werewolf/Enemy.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=2]
@@ -10,6 +10,9 @@ height = 128.0
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1079, 86 )
 
+[sub_resource type="CircleShape2D" id=3]
+radius = 19.0
+
 [node name="Enemy" type="KinematicBody2D" groups=["enemy"]]
 script = ExtResource( 2 )
 
@@ -18,14 +21,32 @@ position = Vector2( -25, -13 )
 scale = Vector2( 1.3, 1.4 )
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemy"]]
+[node name="enemy-body" type="CollisionShape2D" parent="." groups=["enemy"]]
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
+[node name="trident-right" type="Area2D" parent="."]
+
+[node name="area-right" type="CollisionShape2D" parent="trident-right"]
+position = Vector2( 56, 0 )
+shape = SubResource( 3 )
+
+[node name="trident-left" type="Area2D" parent="."]
+
+[node name="area-left" type="CollisionShape2D" parent="trident-left"]
+position = Vector2( -56, 0 )
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="trident-right" to="." method="_on_tridentright_body_entered"]
+[connection signal="body_entered" from="trident-left" to="." method="_on_tridentleft_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
