@@ -20,7 +20,7 @@
 [ext_resource path="res://Music/Wolf LOOP.ogg" type="AudioStream" id=18]
 
 [sub_resource type="DynamicFont" id=32]
-size = 17
+size = 18
 outline_color = Color( 0.00784314, 0.223529, 0.247059, 1 )
 font_data = ExtResource( 7 )
 
@@ -657,10 +657,12 @@ position = Vector2( 721, 654.5 )
 texture = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="cartel zx"]
-margin_left = 614.0
-margin_top = 619.0
-margin_right = 769.0
-margin_bottom = 652.0
+margin_left = 609.0
+margin_top = 615.0
+margin_right = 777.0
+margin_bottom = 654.0
+rect_rotation = 2.0
+custom_colors/font_color = Color( 0.0235294, 0.321569, 0.403922, 1 )
 custom_fonts/font = SubResource( 32 )
 text = "z. para saltar
 x. para atacar"
