@@ -113,22 +113,24 @@ start_node = "wolfiemueve"
 [node name="TitleScreen" type="Node2D"]
 
 [node name="FondoNoche" type="Sprite" parent="."]
-position = Vector2( 784, 448 )
+position = Vector2( 957, 549 )
+scale = Vector2( 1.25335, 1.25335 )
 texture = ExtResource( 2 )
 
 [node name="ProtaTitulo" type="AnimatedSprite" parent="."]
-position = Vector2( 1061, 569.031 )
-scale = Vector2( 3.55329, 3.55329 )
+position = Vector2( 1299, 611 )
+scale = Vector2( 4.20522, 4.20522 )
 frames = SubResource( 1 )
 animation = "iddle_lobo"
+frame = 1
 playing = true
 flip_h = true
 
 [node name="StartButton" type="Button" parent="."]
-margin_left = 265.0
-margin_top = 482.0
-margin_right = 648.0
-margin_bottom = 595.0
+margin_left = 305.0
+margin_top = 578.0
+margin_right = 688.0
+margin_bottom = 691.0
 custom_fonts/font = SubResource( 2 )
 text = "iniciar"
 script = ExtResource( 5 )
@@ -145,8 +147,8 @@ anims/RESET = SubResource( 4 )
 anims/wolfiemueve = SubResource( 5 )
 
 [node name="Titulo-Sheet-export" type="Sprite" parent="."]
-position = Vector2( 401, 409 )
-scale = Vector2( 1.7, 1.7 )
+position = Vector2( 504, 487 )
+scale = Vector2( 2.13, 2.13 )
 z_index = 1
 texture = ExtResource( 8 )
 hframes = 13
