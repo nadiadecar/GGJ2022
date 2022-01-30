@@ -991,7 +991,7 @@ disabled = true
 
 [node name="ray-right" type="RayCast2D" parent="attack-right"]
 enabled = true
-cast_to = Vector2( 0, 20 )
+cast_to = Vector2( 0, 25 )
 
 [node name="attack-left" type="CollisionShape2D" parent="." groups=["wolf-attack"]]
 visible = false
@@ -1002,7 +1002,7 @@ disabled = true
 
 [node name="ray-left" type="RayCast2D" parent="attack-left"]
 enabled = true
-cast_to = Vector2( 0, 20 )
+cast_to = Vector2( 0, 25 )
 
 [node name="Caution" type="Area2D" parent="."]
 visible = false

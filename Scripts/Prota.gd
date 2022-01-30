@@ -98,7 +98,7 @@ func _physics_process(delta) -> void:
 
 	#Animations 
 	if on_floor and not attacked: 
-		if abs(lineal_vel.x) <= 0:
+		if abs(lineal_vel.x) <= 0 and not jumped:
 			if to_right:
 				playback.travel("Idle-Right")
 			else:
