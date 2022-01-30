@@ -19,7 +19,7 @@ func fire():
 
 func _on_Timer_timeout():
 	timer.stop()
-	if player:
+	if player != null:
 		fire()
 
 

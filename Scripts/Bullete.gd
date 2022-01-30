@@ -3,7 +3,7 @@ extends Area2D
 var move = Vector2.ZERO
 var look_vec = Vector2.ZERO
 var SPEED = 350
-var player = null
+var player
 
 func _ready():
 	look_vec = player.position - global_position
