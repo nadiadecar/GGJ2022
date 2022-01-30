@@ -986,7 +986,7 @@ hframes = 4
 shape = SubResource( 1 )
 
 [node name="attack-right" type="CollisionShape2D" parent="." groups=["wolf-attack"]]
-position = Vector2( 50, 4.5 )
+position = Vector2( 72, 4.5 )
 rotation = -1.5708
 shape = SubResource( 2 )
 disabled = true
@@ -996,8 +996,7 @@ enabled = true
 cast_to = Vector2( 0, 25 )
 
 [node name="attack-left" type="CollisionShape2D" parent="." groups=["wolf-attack"]]
-visible = false
-position = Vector2( -50, 4.5 )
+position = Vector2( -72, 4.5 )
 rotation = 1.5708
 shape = SubResource( 3 )
 disabled = true

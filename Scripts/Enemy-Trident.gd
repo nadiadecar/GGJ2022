@@ -2,6 +2,8 @@ extends "res://Scripts/Enemy-General.gd"
 
 func _ready():
 	set_damage(200)
+	$AnimationTree.active = true
+	get_node("AnimationPlayer")
 
 
 func _on_tridentright_body_entered(body):
@@ -27,3 +29,7 @@ func damage_prota():
 func _on_Timer_timeout():
 	timer.stop()
 	damage_prota()
+
+
+func _on_attackedTimer_timeout():
+	attacked = false 
