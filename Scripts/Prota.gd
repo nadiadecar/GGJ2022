@@ -96,7 +96,7 @@ func recive_damage(damage):
 	HP -= damage 
 	playbackBarra.travel(String(HP/100))
 	got_attacked = true
-	attacked_timer.set_wait_time(1)
+	attacked_timer.set_wait_time(0.45)
 	attacked_timer.start()
 	print(HP)
 	if HP <= 0: 

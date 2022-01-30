@@ -127,7 +127,6 @@ playing = true
 flip_h = true
 
 [node name="StartButton" type="Button" parent="."]
-
 margin_left = 415.0
 margin_top = 546.0
 margin_right = 798.0
