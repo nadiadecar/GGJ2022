@@ -119,7 +119,6 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=8]
 resource_name = "Damage-Left"
-loop = true
 step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:flip_h")

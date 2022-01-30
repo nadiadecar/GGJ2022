@@ -1,7 +1,7 @@
 extends "res://Scripts/Enemy-General.gd"
 
 func _ready():
-	set_damage(200)
+	self.set_damage(200)
 	$AnimationTree.active = true
 	get_node("AnimationPlayer")
 
@@ -32,4 +32,5 @@ func _on_Timer_timeout():
 
 
 func _on_attackedTimer_timeout():
-	attacked = false 
+	attacked_timer.stop()
+	self.set_attacked(false) 
