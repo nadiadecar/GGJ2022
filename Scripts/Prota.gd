@@ -25,6 +25,7 @@ var collider
 signal game_over
 
 onready var timer = $Timer
+onready var timer_can_attack = $CanAttack
 onready var attacked_timer = $attackedTimer
 onready var playback = $AnimationTree.get("parameters/playback")
 onready var world = get_parent().get_parent()
@@ -62,7 +63,13 @@ func get_movement():
 
 
 func wolf_attack():
+	if to_right:
+		playback.travel("Attack-Right")
+	else: 
+		playback.travel("Attack-Left")
 	
+	$"Sfx/sonido_golpe".play()
+		
 	collider = false
 	
 	var collision = false
@@ -79,12 +86,9 @@ func wolf_attack():
 	if collision:
 		if collider.is_in_group("enemy"): 
 			collider.recive_damage(400)
-		
-	$"Sfx/sonido_golpe".play()
-	if to_right:
-		playback.travel("Attack-Right")
-	else: 
-		playback.travel("Attack-Left")
+	
+	timer.set_wait_time(0.5)
+	timer.start()
 
 
 func recive_damage(damage): 
@@ -103,7 +107,8 @@ func recive_damage(damage):
 func _physics_process(delta) -> void:
 	# MOVIMIENTO
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
-	lineal_vel.y += GRAVITY * delta
+	if lineal_vel.x == 0: 
+		lineal_vel.y += GRAVITY * delta
 	
 	on_floor = is_on_floor()
 	
@@ -113,7 +118,7 @@ func _physics_process(delta) -> void:
 		lineal_vel = move_and_slide(lineal_vel)
 		lineal_vel.x = 0
 			
-		if Input.is_action_pressed("attack") and can_attack:
+		if Input.is_action_pressed("attack") and can_attack and not (got_attacked or jumped):
 			if is_wolf:
 				attacked = true
 				can_attack = false 
@@ -155,8 +160,9 @@ func _physics_process(delta) -> void:
 		
 		if Input.is_action_just_released("attack") and not waiting:
 			waiting = true 
-			timer.set_wait_time(1)
-			timer.start()
+			timer_can_attack.set_wait_time(1.0)
+			timer_can_attack.start()
+			
 	
 	if dead: 
 		if to_right: 
@@ -167,11 +173,15 @@ func _physics_process(delta) -> void:
 
 func _on_Timer_timeout():
 	timer.stop()
-	can_attack = true
-	waiting = false
 	attacked = false 
 
 
 func _on_attackedTimer_timeout():
 	attacked_timer.stop()
 	got_attacked = false
+
+
+func _on_CanAttack_timeout():
+	timer_can_attack.stop()
+	can_attack = true
+	waiting = false
