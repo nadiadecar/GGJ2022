@@ -949,6 +949,7 @@ position = Vector2( 578.5, 4.5 )
 shape = SubResource( 33 )
 
 [node name="Final" parent="." instance=ExtResource( 22 )]
+visible = false
 
 [connection signal="game_over" from="Characters/Prota" to="." method="_on_Prota_game_over"]
 [connection signal="timeout" from="EnemiesCreator" to="." method="_on_EnemiesCreator_timeout"]
