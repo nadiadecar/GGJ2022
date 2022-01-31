@@ -59,6 +59,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Titulo-Sheet-export:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "wolfiemueve"
@@ -100,6 +112,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Titulo-Sheet-export:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=6]
 animation = "wolfiemueve"
@@ -123,7 +147,6 @@ position = Vector2( 1406, 557 )
 scale = Vector2( 2.95982, 2.95982 )
 frames = SubResource( 1 )
 animation = "iddle_lobo"
-frame = 1
 playing = true
 flip_h = true
 
@@ -151,7 +174,7 @@ anims/wolfiemueve = SubResource( 5 )
 [node name="Titulo-Sheet-export" type="Sprite" parent="."]
 position = Vector2( 561, 446 )
 scale = Vector2( 2.15414, 2.06571 )
-z_index = 1
+z_index = 2
 texture = ExtResource( 8 )
 hframes = 13
 

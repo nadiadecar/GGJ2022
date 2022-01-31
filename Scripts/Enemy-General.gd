@@ -26,11 +26,12 @@ func set_damage(dam):
 
 func _physics_process(delta) -> void:
 	# MOVIMIENTO
-	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
+	lineal_vel = move_and_slide(lineal_vel, Vector2.UP) 
 	lineal_vel.y += GRAVITY * delta
+	if player and (player.position.y - position.y <= 0): 
+		lineal_vel.y = 0
 	
-	
-	if player: 
+	if player and abs(player.position.x - position.x) > 125: 
 		move = position.direction_to(player.position) * SPEED
 		if move.x < 0: 
 			to_right = false

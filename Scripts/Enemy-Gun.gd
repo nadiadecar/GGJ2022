@@ -3,7 +3,7 @@ extends "res://Scripts/Enemy-General.gd"
 onready var BULLETE_SCENE_RIGHT = preload("res://Scenes/BulleteRight.tscn")
 onready var BULLETE_SCENE_LEFT = preload("res://Scenes/BulleteLeft.tscn")
 
-var arma = Vector2(100,0)
+var arma = Vector2(150,0)
 
 func _ready():
 	self.set_damage(150)
@@ -21,6 +21,8 @@ func fire():
 		else:
 			bullet = BULLETE_SCENE_LEFT.instance()
 			positionBull = get_global_position() - arma
+			bullet.to_right = false
+			
 		bullet.player = player
 		bullet.position = positionBull
 		get_parent().add_child(bullet)

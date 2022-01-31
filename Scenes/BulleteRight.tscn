@@ -20,6 +20,7 @@ texture = ExtResource( 2 )
 position = Vector2( 0, -2 )
 rotation = -1.5708
 shape = SubResource( 1 )
+disabled = true
 
 [node name="RayBullete" type="RayCast2D" parent="CollisionShape2D"]
 enabled = true

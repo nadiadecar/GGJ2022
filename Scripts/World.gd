@@ -19,7 +19,7 @@ func _ready():
 func enemeiesCreate(): 
 	
 	if pos_player.x > 1060 and not player.dead: 
-		var pos_x = random.randi_range(860,15400)
+		var pos_x = random.randi_range(860,10020)
 		var type = random.randi_range(0,1)
 		var enemy
 		if type == 1: 
@@ -30,13 +30,16 @@ func enemeiesCreate():
 		add_child(enemy)
 		enemy.position = Vector2(pos_x, -125)
 		
-	timer.set_wait_time(1.2)
+	timer.set_wait_time(5)
 	timer.start()
 
 
 func _physics_process(delta):
 	pos_player = player.position
 	
+	if pos_player.x >= 10900: 
+		get_tree().change_scene("res://Scenes/Final.tscn")
+		
 	constant.position = Vector2(pos_player.x , pos_player.y - 276)
 	fondo.position = constant.position
 	if Input.is_action_pressed("restart") and player.dead: 
