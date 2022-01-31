@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Scripts/Prota.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Werewolf/lobo_iddle_1.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Sprites/Werewolf/wereguol jump-Sheet.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Werewolf/wereguol pelea-Sheet-Sheet.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Werewolf/wereguol dano-Sheet.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/vignete.png" type="Texture" id=8]
 [ext_resource path="res://Sfx/sonido_salto_humano.wav" type="AudioStream" id=9]
 [ext_resource path="res://Sfx/sonido_salto_lobo.wav" type="AudioStream" id=10]
 [ext_resource path="res://Sfx/sonido_recibir_danio.wav" type="AudioStream" id=11]
@@ -1594,6 +1595,11 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 41 )
 
 [node name="CanAttack" type="Timer" parent="."]
+
+[node name="Vignete" type="Sprite" parent="."]
+position = Vector2( 0.999996, -330 )
+scale = Vector2( 0.53316, 0.53316 )
+texture = ExtResource( 8 )
 
 [connection signal="timeout" from="attackedTimer" to="." method="_on_attackedTimer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
