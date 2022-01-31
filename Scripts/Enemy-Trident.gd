@@ -7,12 +7,12 @@ func _ready():
 
 
 func _on_tridentright_body_entered(body):
-	if body.is_in_group("prota") and not dead: 
+	if body.is_in_group("prota") and not (dead or attacked): 
 		prota = body 
 		damage_prota()
 
 func _on_tridentleft_body_entered(body):
-	if body.is_in_group("prota") and not dead: 
+	if body.is_in_group("prota") and not (dead or attacked) : 
 		prota = body
 		damage_prota()
 
@@ -28,7 +28,7 @@ func damage_prota():
 
 func _on_Timer_timeout():
 	timer.stop()
-	if not dead:
+	if not (dead or attacked):
 		damage_prota()
 
 
