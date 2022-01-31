@@ -122,16 +122,15 @@ position = Vector2( 1381, 663 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 1 )
 animation = "iddle_lobo"
+frame = 1
 playing = true
 flip_h = true
 
 [node name="StartButton" type="Button" parent="."]
-
 margin_left = 330.0
 margin_top = 565.0
 margin_right = 713.0
 margin_bottom = 678.0
-
 rect_scale = Vector2( 1.3, 1.3 )
 custom_fonts/font = SubResource( 2 )
 text = "iniciar"
@@ -153,8 +152,7 @@ position = Vector2( 561, 446 )
 scale = Vector2( 2.15414, 2.06571 )
 z_index = 1
 texture = ExtResource( 8 )
-hframes = 12
-frame = 3
+hframes = 13
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 7 )
