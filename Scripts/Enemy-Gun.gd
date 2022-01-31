@@ -1,26 +1,34 @@
 extends "res://Scripts/Enemy-General.gd"
 
-onready var BULLETE_SCENE = preload("res://Scenes/Bullete.tscn")
+onready var BULLETE_SCENE_RIGHT = preload("res://Scenes/BulleteRight.tscn")
+onready var BULLETE_SCENE_LEFT = preload("res://Scenes/BulleteLeft.tscn")
 
+var arma = Vector2(100,0)
 
 func _ready():
 	self.set_damage(150)
 	$AnimationTree.active = true
 	get_node("AnimationPlayer")
+	fire()
 
-func fire(): 
-	var bullet = BULLETE_SCENE.instance()
-	bullet.player = player
-	bullet.position = get_global_position()
-	get_parent().add_child(bullet)
-	if not to_right: 
-		bullet.bull.set_flip_h(true)
+func fire():
+	if player:  
+		var bullet
+		var positionBull
+		if to_right:
+			bullet = BULLETE_SCENE_RIGHT.instance()
+			positionBull = get_global_position() + arma
+		else:
+			bullet = BULLETE_SCENE_LEFT.instance()
+			positionBull = get_global_position() - arma
+		bullet.player = player
+		bullet.position = positionBull
+		get_parent().add_child(bullet)
+
 	timer.set_wait_time(2)
 	timer.start()
 
-func _physics_process(delta):
-	if player: 
-		fire()
+
 
 func _on_Timer_timeout():
 	if player != null:
