@@ -20,7 +20,7 @@
 [ext_resource path="res://Music/Wolf LOOP.ogg" type="AudioStream" id=18]
 [ext_resource path="res://Sprites/Assets/roca.png" type="Texture" id=19]
 [ext_resource path="res://Sprites/Background/arboleada prrime_noche.png" type="Texture" id=20]
-[ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/TileMap (no me borres).tscn" type="PackedScene" id=21]
 
 [sub_resource type="DynamicFont" id=32]
 size = 18
@@ -883,7 +883,6 @@ tile_data = PoolIntArray( -3, 536870949, 0, -65515, 536870948, 0, 65512, 5368709
 [node name="MusicaPrincipal" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
 volume_db = -10.0
-pitch_scale = 0.51
 autoplay = true
 
 [node name="LamparaNoche" type="Sprite" parent="."]

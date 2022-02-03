@@ -1518,19 +1518,19 @@ __meta__ = {
 
 [node name="sonido_golpe" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 12 )
-volume_db = -10.0
+volume_db = -30.0
 
 [node name="sonido_recibir_danio" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 11 )
-volume_db = -10.0
+volume_db = -25.0
 
 [node name="sonido_salto_humano" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 9 )
-volume_db = -10.0
+volume_db = -25.0
 
 [node name="sonido_salto_lobo" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource( 10 )
-volume_db = -10.0
+volume_db = -25.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 4, -15 )
