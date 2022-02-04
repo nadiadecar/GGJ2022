@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Scenes/Personajes/Prota.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Background/arbusticos_noche.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Sprites/Assets/roca.png" type="Texture" id=19]
 [ext_resource path="res://Sprites/Background/arboleada prrime_noche.png" type="Texture" id=20]
 [ext_resource path="res://Scenes/TileMap (no me borres).tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/caja_obstaculo.tscn" type="PackedScene" id=22]
 
 [sub_resource type="DynamicFont" id=32]
 size = 18
@@ -911,17 +912,7 @@ __meta__ = {
 
 [node name="EnemiesCreator" type="Timer" parent="."]
 
-[node name="Roca2" type="StaticBody2D" parent="."]
-position = Vector2( 788, 1502 )
-
-[node name="Roca" type="Sprite" parent="Roca2"]
-position = Vector2( 1168, -795 )
-texture = ExtResource( 19 )
-offset = Vector2( -404, 46 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Roca2"]
-position = Vector2( 759.5, -742.5 )
-shape = SubResource( 33 )
+[node name="Roca2" parent="." instance=ExtResource( 22 )]
 
 [node name="Roca3" type="StaticBody2D" parent="."]
 position = Vector2( 1651, 2454 )
