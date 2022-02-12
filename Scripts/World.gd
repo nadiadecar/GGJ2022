@@ -15,6 +15,7 @@ var pos_player = Vector2.ZERO
 
 func _ready():
 	enemeiesCreate()
+	$Constant/Camera2D.make_current()
 
 func enemeiesCreate(): 
 	
@@ -41,7 +42,7 @@ func _physics_process(delta):
 		get_tree().change_scene("res://Scenes/Final.tscn")
 		
 	constant.position = Vector2(pos_player.x , pos_player.y - 276)
-	fondo.position = constant.position
+	fondo.position = Vector2(constant.position.x, constant.position.y + 50)
 	if Input.is_action_pressed("restart") and player.dead: 
 		print("lo pesca")
 		get_tree().change_scene("res://Scenes/Principal.tscn")

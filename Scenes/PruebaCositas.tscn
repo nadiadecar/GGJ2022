@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Personajes/Prota.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Prota" parent="." instance=ExtResource( 2 )]
 
